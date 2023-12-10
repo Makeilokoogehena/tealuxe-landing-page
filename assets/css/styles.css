@@ -1,0 +1,82 @@
+.header {
+  font-size: 18px;
+  padding: 30px 0;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  margin: auto 235px auto 0;
+  padding-bottom: 37px;
+  text-align: center;
+}
+
+.logo__link {
+  max-width: 68.5px;
+  max-height: 85px;
+  overflow: hidden;
+}
+
+.logo__image {
+  width: 100%;
+}
+
+.logo__text {
+  line-height: 21.5px;
+  font-family: "IM Fell Great Primer SC", serif;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  padding: 58px 0;
+}
+.menu__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style-type: none;
+}
+
+.menu__item {
+  text-align: justify;
+  margin-right: 65px;
+}
+
+.menu__item:last-child {
+  margin-right: 125px;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #151618;
+  line-height: 25px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.user-actions {
+  display: flex;
+  margin: 0;
+  padding: 58px 0;
+}
+
+.user-actions__item {
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+.user-actions__item:last-child {
+  margin-left: 100px;
+}
