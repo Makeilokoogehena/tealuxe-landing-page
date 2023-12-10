@@ -1,3 +1,19 @@
+p {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Cormorant", serif;
+}
+
 .header {
   font-size: 18px;
   padding: 30px 0;
@@ -12,7 +28,7 @@
 .header__inner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .header__logo {
@@ -79,4 +95,34 @@
 
 .user-actions__item:last-child {
   margin-left: 100px;
+}
+
+.preview {
+  background-image: url("/assets/images/background-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.preview__info {
+  color: #ffffff;
+  min-height: 500px;
+  /* padding: 0 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.preview__title {
+  font-size: 60px;
+  max-width: 790px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.preview__text {
+  font-size: 24px;
+  max-width: 558px;
+  font-weight: 400;
+  margin-bottom: 48px;
 }
