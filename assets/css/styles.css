@@ -25,6 +25,10 @@ body {
   color: #151618;
 }
 
+blockquote {
+  margin: 0;
+}
+
 .header {
   font-size: 18px;
   padding: 30px 0;
@@ -170,13 +174,19 @@ body {
 }
 
 .assortment__item {
-  margin-right: 40px;
   overflow: hidden;
   max-width: 208px;
 }
 
+.assortment__item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .assortment__image {
   width: 100%;
+  max-height: 208px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .assortment__name {
@@ -186,25 +196,35 @@ body {
 
 .reviews {
   background-color: #f7f2ea;
+  padding: 60px 0;
 }
 
 .reviews__title {
   font-size: 40px;
   font-weight: 400;
   text-align: center;
-  padding: 60px 0;
+  margin-bottom: 60px;
 }
 
 .reviews__list {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   display: flex;
+  justify-content: space-between;
 }
 
-.reviews__text {
+.reviews__item {
+  max-width: 280px;
+}
+
+.reviews__item:not(:last-child) {
+  margin-right: 26px;
+}
+
+.reviews__text p {
   font-size: 16px;
   font-style: italic;
-  font-weight: 300;
-  max-width: 280px;
+  font-weight: 100;
+  margin-bottom: 10px;
 }
 
 .reviews__name {
