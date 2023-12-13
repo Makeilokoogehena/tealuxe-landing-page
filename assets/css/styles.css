@@ -20,14 +20,17 @@ ul {
   padding: 0;
 }
 
-body {
-  font-family: "Cormorant", serif;
-  color: #151618;
-}
-
 blockquote {
   margin: 0;
 }
+
+body {
+  font-family: "Cormorant", sans-serif;
+  font-size: 14px;
+  color: #151618;
+}
+
+/* GENERAL STYLES */
 
 .header {
   font-size: 18px;
@@ -49,19 +52,12 @@ blockquote {
 .header__logo {
   display: flex;
   flex-direction: column;
-  margin: auto 235px auto 0;
-  padding-bottom: 37px;
-  text-align: center;
-}
-
-.logo__link {
-  max-width: 68.5px;
-  max-height: 85px;
-  overflow: hidden;
 }
 
 .logo__image {
+  max-width: 68px;
   width: 100%;
+  max-height: 84px;
 }
 
 .logo__text {
@@ -73,24 +69,20 @@ blockquote {
   display: flex;
   align-items: center;
   padding: 58px 0;
+  margin: 0 20px;
 }
+
 .menu__list {
   padding: 0;
   margin: 0;
   display: flex;
 }
 
-.menu__item {
-  text-align: justify;
+.menu__item:not(:last-child) {
   margin-right: 65px;
 }
 
-.menu__item:last-child {
-  margin-right: 125px;
-}
-
 .menu__link {
-  text-decoration: none;
   color: #151618;
   line-height: 25px;
   font-family: "Open Sans", sans-serif;
@@ -98,16 +90,13 @@ blockquote {
 
 .user-actions {
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 58px 0;
 }
 
-.user-actions__item {
-  margin-right: 20px;
-}
-
-.user-actions__item:last-child {
-  margin-left: 100px;
+.user-actions__item:nth-child(2) {
+  margin: 0 100px 0 20px;
 }
 
 .preview {
