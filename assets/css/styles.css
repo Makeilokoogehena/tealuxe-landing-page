@@ -380,6 +380,7 @@ body {
 .newsletter__agreement {
   display: flex;
   align-items: baseline;
+  gap: 0 10px;
 }
 
 .newsletter__agreement-checkbox {
@@ -390,6 +391,46 @@ body {
 .newsletter__agreement-text {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
-  margin-left: 10px;
-  max-width: 560px;
+  max-width: 570px;
+}
+
+.prioritise {
+  margin-bottom: 150px;
+}
+
+.prioritise__title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.prioritise__item {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prioritise__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0 49px;
+  align-items: center;
+}
+
+.prioritise__list-title {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.prioritise__list-text {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.prioritise__list-image {
+  max-width: 60px;
+  width: 100%;
 }
