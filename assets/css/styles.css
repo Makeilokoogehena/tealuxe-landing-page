@@ -332,7 +332,6 @@ body {
 .newsletter__wrapper {
   display: flex;
   justify-content: space-around;
-
   gap: 0 40px;
 }
 
@@ -547,6 +546,7 @@ body {
 .footer__socials-list {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .footer__socials-item:not(:last-child) {
@@ -559,5 +559,30 @@ body {
 
 .footer__socials-icon {
   max-width: 22px;
+  width: 100%;
+}
+
+.footer__icon {
+  display: flex;
+  align-items: center;
+}
+
+.footer__icon-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  margin-right: 174px;
+}
+
+.footer__icon-list {
+  display: flex;
+  align-items: center;
+}
+
+.footer__icon-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.footer__icon-image {
+  max-width: 32px;
   width: 100%;
 }
