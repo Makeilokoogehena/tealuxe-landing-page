@@ -438,7 +438,7 @@ body {
 
 .footer {
   background-color: #f7f2ea;
-  padding: 100px 0 0 0;
+  padding: 100px 0 18px 0;
 }
 
 .footer__wrapper {
@@ -481,6 +481,10 @@ body {
   align-items: center;
 }
 
+.footer__blockquote blockquote {
+  margin-bottom: 35px;
+}
+
 .footer__blockquote-text {
   font-size: 16px;
   font-style: italic;
@@ -504,10 +508,15 @@ body {
   display: flex;
 }
 
+/* .footer__contacts-group {
+  display: flex;
+  align-items: center;
+} */
+
 .footer__contacts-logo {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  margin: 20px 40px 0 0;
 }
 
 .footer__logo {
@@ -515,15 +524,8 @@ body {
   width: 100%;
 }
 
-.footer__logo-text {
-  font-size: 14px;
-  font-family: "IM Fell Great Primer SC", sans-serif;
-  font-weight: 400;
-  line-height: 0;
-}
-
-.footer__contacts-list {
-  margin-top: 40px;
+.footer__contact-inner {
+  margin: 40px 0 0 40px;
 }
 
 .footer__contacts-item {
@@ -583,6 +585,7 @@ body {
 }
 
 .footer__icon-image {
-  max-width: 32px;
+  max-width: 31px;
+  height: 25px;
   width: 100%;
 }
