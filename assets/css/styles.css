@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Regular"), local("Open-Sans-Regular"),
+    url("/assets/fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("/assets/fonts/OpenSans-Regular.woff") format("woff"),
+    url("/assets/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cormorant";
+  src: local("Cormorant Regular"), local("Cormorant-Regular"),
+    url("/assets/fonts/Cormorant-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Cormorant-Regular.woff") format("woff"),
+    url("/assets/fonts/Cormorant-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -12,6 +32,7 @@ h3,
 h4 {
   margin: 0;
   line-height: normal;
+  font-weight: 400;
 }
 
 a {
@@ -128,7 +149,7 @@ body {
   background-image: url("/assets/images/background-image.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom center;
+  background-position: bottom left;
 }
 
 .preview__info {
@@ -157,11 +178,7 @@ body {
 
 .blockquote {
   margin: 150px auto;
-  max-width: 750px;
-}
-
-.blockquote__wrapper {
-  margin: 0;
+  max-width: 735px;
 }
 
 .blockquote__text {
@@ -187,12 +204,10 @@ body {
 .assortment__list {
   display: flex;
   justify-content: space-between;
-
   text-align: center;
 }
 
 .assortment__item {
-  overflow: hidden;
   max-width: 208px;
 }
 
@@ -221,21 +236,16 @@ body {
 .reviews__list {
   font-family: "Open Sans", sans-serif;
   display: flex;
-  justify-content: space-between;
+  gap: 0 26px;
 }
 
 .reviews__item {
   max-width: 280px;
 }
 
-.reviews__item:not(:last-child) {
-  margin-right: 26px;
-}
-
 .reviews__text p {
   font-size: 16px;
   font-style: italic;
-  font-weight: 100;
   margin-bottom: 10px;
 }
 
@@ -250,18 +260,14 @@ body {
   margin: 150px 0;
 }
 
-.main-blog__title {
-  font-weight: 400;
-}
-
 .main-blog__list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: space-between;
-  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 58px;
 }
 
 .main-blog__item {
+  max-width: 542px;
   display: flex;
   gap: 0 20px;
 }
@@ -269,18 +275,18 @@ body {
 .main-blog__item-image {
   width: 100%;
   object-fit: cover;
-  flex-shrink: 0;
   max-width: 270px;
   max-height: 180px;
 }
+
 .main-blog__item-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .main-blog__content-title {
-  font-weight: 400;
+  font-size: 24px;
+  min-height: 86px;
   margin-bottom: 10px;
 }
 
@@ -291,9 +297,7 @@ body {
 }
 
 .main-blog__item-link {
-  margin-top: 37px;
-  position: relative;
-  font-family: "Open Sans", sans-serif;
+  margin-top: auto;
 }
 
 .main-blog__item-link::after {
