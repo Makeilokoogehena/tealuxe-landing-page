@@ -1,9 +1,9 @@
 @font-face {
   font-family: "Open Sans";
   src: local("Open Sans Regular"), local("Open-Sans-Regular"),
-    url("/assets/fonts/OpenSans-Regular.woff2") format("woff2"),
-    url("/assets/fonts/OpenSans-Regular.woff") format("woff"),
-    url("/assets/fonts/OpenSans-Regular.ttf") format("truetype");
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff"),
+    url("../fonts/OpenSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -11,11 +11,15 @@
 @font-face {
   font-family: "Cormorant";
   src: local("Cormorant Regular"), local("Cormorant-Regular"),
-    url("/assets/fonts/Cormorant-Regular.woff2") format("woff2"),
-    url("/assets/fonts/Cormorant-Regular.woff") format("woff"),
-    url("/assets/fonts/Cormorant-Regular.ttf") format("truetype");
+    url("../fonts/Cormorant-Regular.woff2") format("woff2"),
+    url("../fonts/Cormorant-Regular.woff") format("woff"),
+    url("../fonts/Cormorant-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+}
+
+:root {
+  --overlay-display: none;
 }
 
 * {
@@ -73,6 +77,18 @@ body {
   position: relative;
 }
 
+body::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: var(--overlay-display);
+}
+
 .header {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -113,7 +129,7 @@ body {
   display: flex;
   align-items: center;
   padding: 58px 0;
-  margin-right: 125px;
+  z-index: 3;
 }
 
 .menu__button,
@@ -130,7 +146,7 @@ body {
 }
 
 .menu__item:not(:last-child) {
-  margin-right: 65px;
+  margin-right: 70px;
 }
 
 .menu__link {
@@ -142,28 +158,34 @@ body {
   display: flex;
   margin: 0;
   padding: 58px 0;
+  align-items: center;
 }
 
 .user-actions__item {
   max-width: 22px;
-}
-
-.user-actions__link-icon {
-  width: 100%;
+  max-height: 22px;
 }
 
 .user-actions__item:nth-child(2) {
   margin: 0 100px 0 20px;
 }
 
+.user-actions__link-icon {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 1160px) {
   .header__logo {
-    margin-right: 60px;
+    margin: 0 60px 0 0;
     padding-bottom: 0;
+  }
+  .user-actions__item:nth-child(2) {
+    margin: 0 50px 0 20px;
   }
 }
 
-@media screen and (max-width: 1005px) {
+@media screen and (max-width: 1000px) {
   .menu {
     margin-right: 116px;
     padding: 40px 0;
@@ -175,11 +197,8 @@ body {
     padding: 40px 0;
   }
 }
-.user-actions__item:nth-child(2) {
-  margin: 0 50px 0 20px;
-}
 
-@media screen and (max-width: 961px) {
+@media screen and (max-width: 960px) {
   .header {
     font-size: 16px;
   }
@@ -206,6 +225,7 @@ body {
   }
   .header__logo {
     margin: 0;
+    justify-content: center;
     order: 2;
   }
   .menu {
@@ -221,6 +241,7 @@ body {
     height: 20px;
     flex-direction: column;
     justify-content: space-around;
+    flex-shrink: 1;
   }
   .menu__button span {
     background-color: #000;
@@ -243,7 +264,7 @@ body {
     font-family: "Cormorant", sans-serif;
     font-weight: 400;
     padding-top: 60px;
-    z-index: 3;
+    z-index: 4;
     transition: transform 0.5s ease;
   }
   .menu__list.menu__list-open {
@@ -302,23 +323,23 @@ body {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 490px) {
   .header {
     padding: 10px 0;
-  }
-  .logo__link {
-    max-width: 40px;
-    max-height: 56px;
   }
   .user-actions,
   .menu {
     padding: 20px 0;
   }
+  .logo__link {
+    max-width: 40px;
+    max-height: 56px;
+  }
 }
 
 @media screen and (max-width: 360px) {
   .user-actions__item:nth-child(2) {
-    margin: 0 20px 0 20px;
+    margin: 0 20px;
   }
 }
 
