@@ -1,20 +1,20 @@
 const menuButton = document.querySelector(".menu__button");
-const menuClose = document.querySelector(".menu__close");
-const menuList = document.querySelector(".menu__list");
+const menuClose = document.querySelector(".mobile-menu__close-button");
+const menuList = document.querySelector(".mobile-menu");
 const body = document.querySelector(".body");
 
 function onOpenButtonClick() {
-  menuList.classList.add("menu__list-open");
+  menuList.classList.add("mobile-menu__list-open");
   body.style.setProperty("--overlay-display", "block");
 }
 
 function onCloseButtonClick() {
-  menuList.classList.remove("menu__list-open");
+  menuList.classList.remove("mobile-menu__list-open");
   body.style.setProperty("--overlay-display", "none");
 }
 
 function onDocumentClick(e) {
-  if (!menuList.classList.contains("menu__list-open")) return;
+  if (!menuList.classList.contains("mobile-menu__list-open")) return;
   if (menuList.contains(e.target) || menuButton.contains(e.target)) {
     console.log("click");
     return;
@@ -23,7 +23,7 @@ function onDocumentClick(e) {
 }
 
 function onDocumentKeydown(e) {
-  if (!menuList.classList.contains("menu__list-open")) return;
+  if (!menuList.classList.contains("mobile-menu__list-open")) return;
   if (e.code === "Escape") {
     console.log("keydown");
     onCloseButtonClick();
@@ -31,7 +31,7 @@ function onDocumentKeydown(e) {
 }
 
 function onWindowResize() {
-  if (!menuList.classList.contains("menu__list-open")) return;
+  if (!menuList.classList.contains("mobile-menu__list-open")) return;
   if (window.innerWidth >= 770) onCloseButtonClick();
 }
 
