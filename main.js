@@ -16,7 +16,6 @@ function onCloseButtonClick() {
 function onDocumentClick(e) {
   if (!menuList.classList.contains("mobile-menu__list-open")) return;
   if (menuList.contains(e.target) || menuButton.contains(e.target)) {
-    console.log("click");
     return;
   }
   onCloseButtonClick();
@@ -25,7 +24,6 @@ function onDocumentClick(e) {
 function onDocumentKeydown(e) {
   if (!menuList.classList.contains("mobile-menu__list-open")) return;
   if (e.code === "Escape") {
-    console.log("keydown");
     onCloseButtonClick();
   }
 }

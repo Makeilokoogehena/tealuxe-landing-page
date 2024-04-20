@@ -257,7 +257,9 @@ body::before {
   .header {
     font-size: 16px;
   }
-  .header__logo,
+  .header__logo {
+    margin-right: 50px;
+  }
   .menu {
     margin-right: 50px;
   }
