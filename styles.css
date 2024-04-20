@@ -725,7 +725,7 @@ body::before {
 /* header */
 
 .preview {
-  background-image: url("/assets/images/background-image.png");
+  background-image: url("./assets/images/background-image.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom left;
@@ -1101,7 +1101,7 @@ body::before {
 }
 
 .main-blog__item-link::after {
-  content: url(/assets/images/blog-icon.svg);
+  content: url(./assets/images/blog-icon.svg);
   width: 5px;
   height: 10px;
   margin-left: 8px;
@@ -1220,7 +1220,7 @@ body::before {
 
 .newsletter {
   background-color: #f7f2ea;
-  background-image: url(/assets/images/mailing-list-background.png);
+  background-image: url(./assets/images/mailing-list-background.png);
   background-repeat: no-repeat;
   background-position: 100% 100%;
   padding: 100px 0;
