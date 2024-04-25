@@ -1,0 +1,24 @@
+{
+  "name": "tealuxe-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Makeilokoogehena/tealuxe-landing-page.git"
+  },
+  "keywords": [],
+  "author": "Makeilokoogehena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Makeilokoogehena/tealuxe-landing-page/issues"
+  },
+  "homepage": "https://Makeilokoogehena.github.io/tealuxe-landing-page",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}

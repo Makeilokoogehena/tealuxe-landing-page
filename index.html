@@ -3,71 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant&family=IM+Fell+Great+Primer+SC&family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant&family=IM+Fell+Great+Primer+SC&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>TealuxE</title>
   </head>
-  <body>
+  <body class="body">
     <header class="header">
       <div class="container">
         <div class="header__inner">
-          <a class="header__logo logo" href="#">
-            <img
-              class="logo__image"
-              src="assets/images/logo.svg"
-              alt="TealuxE"
-            />
-            <span class="logo__text">TealuxE</span>
-          </a>
+          <div class="header__logo logo">
+            <a class="logo__link" href="#">
+              <img
+                class="logo__image"
+                src="assets/images/header-logo.svg"
+                alt="TealuxE logo"
+              />
+            </a>
+          </div>
           <nav class="menu">
+            <button class="menu__button">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
             <ul class="menu__list">
               <li class="menu__item">
                 <a class="menu__link" href="#">Black</a>
               </li>
+
               <li class="menu__item">
                 <a class="menu__link" href="#">Green</a>
               </li>
+
               <li class="menu__item">
                 <a class="menu__link" href="#">White</a>
               </li>
+
               <li class="menu__item">
                 <a class="menu__link" href="#">Oolong</a>
               </li>
+
               <li class="menu__item">
                 <a class="menu__link" href="#">Pu-erh</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="mobile-menu">
+            <button class="mobile-menu__close-button">
+              <img
+                class="mobile-menu__close-image"
+                src="assets/images/footer-menu-icon.svg"
+                alt="mark"
+              />
+            </button>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Black</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Green</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">White</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Oolong</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Pu-erh</a>
+              </li>
+            </ul>
+            <ul class="menu-information__list">
+              <li class="menu-information__item">
+                <a class="menu-information-link" href="#">Contact Us</a>
+              </li>
+              <li class="menu-information__item">
+                <a class="menu-information-link" href="#">Our Blog</a>
+              </li>
+              <li class="menu-information__item">
+                <a class="menu-information-link" href="#"
+                  >Shipping and Delivery</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-actions">
+              <li class="mobile-actions__item">
+                <a class="mobile-actions__link" href="#">
+                  <img
+                    class="mobile-actions__link-icon"
+                    src="assets/images/icon1.svg"
+                    alt="basket"
+                  />
+                </a>
+              </li>
+              <li class="mobile-actions__item">
+                <a class="mobile-actions__link" href="#">
+                  <img
+                    class="mobile-actions__link-icon"
+                    src="assets/images/icon2.svg"
+                    alt="profile"
+                  />
+                </a>
+              </li>
+              <li class="mobile-actions__item">
+                <a class="mobile-actions__link" href="#">
+                  <img
+                    class="mobile-actions__link-icon"
+                    src="assets/images/icon-search.svg"
+                    alt="search"
+                  />
+                </a>
               </li>
             </ul>
           </nav>
           <ul class="user-actions">
             <li class="user-actions__item">
               <a class="user-actions__link" href="#">
-                <img src="assets/images/icon1.svg" alt="basket" />
+                <img
+                  class="user-actions__link-icon"
+                  src="assets/images/icon1.svg"
+                  alt="basket"
+                />
               </a>
             </li>
             <li class="user-actions__item">
               <a class="user-actions__link" href="#">
-                <img src="assets/images/icon2.svg" alt="profile" />
+                <img
+                  class="user-actions__link-icon"
+                  src="assets/images/icon2.svg"
+                  alt="profile"
+                />
               </a>
             </li>
             <li class="user-actions__item">
-              <a href="#">
-                <img src="assets/images/icon-search.svg" alt="search" />
+              <a class="user-actions__link" href="#">
+                <img
+                  class="user-actions__link-icon"
+                  src="assets/images/icon-search.svg"
+                  alt="search"
+                />
               </a>
             </li>
           </ul>
@@ -90,7 +165,8 @@
           </div>
         </div>
       </section>
-      <section class="blockquote container container-blockquote">
+
+      <section class="blockquote container">
         <blockquote class="blockquote__wrapper">
           <p class="blockquote__text">
             "Tea is not just a drink, it's a way of life and a way to connect
@@ -98,9 +174,10 @@
           </p>
         </blockquote>
       </section>
+
       <section class="assortment">
         <div class="container">
-          <h2 class="assortment__title">Explore our Collections</h2>
+          <h2 class="assortment__title title">Explore our Collections</h2>
           <ul class="assortment__list">
             <li class="assortment__item">
               <img
@@ -145,9 +222,10 @@
           </ul>
         </div>
       </section>
+
       <section class="reviews">
         <div class="container">
-          <h2 class="reviews__title">What our Clients say</h2>
+          <h2 class="reviews__title title">What our Clients say</h2>
           <ul class="reviews__list">
             <li class="reviews__item">
               <blockquote class="reviews__text">
@@ -195,7 +273,7 @@
       </section>
       <section class="main-blog">
         <div class="container">
-          <h2 class="main-blog__title">Our Tea Blog</h2>
+          <h2 class="main-blog__title title">Our Tea Blog</h2>
           <ul class="main-blog__list">
             <li class="main-blog__item">
               <img
@@ -273,7 +351,7 @@
               to know about new tea arrivals, seasonal blends, and special
               discounts. Don't miss out on the tea-rrific perks - sign up today!
             </p>
-            <form class="newsletter__form newsletter-form" action="#">
+            <form class="newsletter__form" action="#">
               <div class="newsletter-form__inner">
                 <input
                   placeholder="name@email.com"
@@ -300,55 +378,273 @@
           </div>
         </div>
       </section>
+
       <section class="prioritise">
         <div class="container">
-          <h2 class="prioritise__title">We Prioritise</h2>
+          <h2 class="prioritise__title title">We Prioritise</h2>
           <ul class="prioritise__list">
             <li class="prioritise__item">
-              <h3 class="prioritise__list-title">Single garden teas</h3>
-              <span class="prioritise__list-text">Complete transparency</span>
+              <h3 class="prioritise__item-title">Single garden teas</h3>
+              <span class="prioritise__item-text">Complete transparency</span>
               <img
                 src="./assets/images/prioritise-image1.jpg"
                 alt="icon"
-                class="prioritise__list-image"
+                class="prioritise__item-image"
               />
             </li>
+
             <li class="prioritise__item">
-              <h3 class="prioritise__list-title">Only Loose leaf tea</h3>
-              <span class="prioritise__list-text">
-                Best Drinking Experience
-              </span>
+              <h3 class="prioritise__item-title">Only Loose leaf tea</h3>
+              <span class="prioritise__item-text"
+                >Best Drinking Experience</span
+              >
               <img
                 src="./assets/images/prioritise-image2.jpg"
                 alt="icon"
-                class="prioritise__list-image"
+                class="prioritise__item-image"
               />
             </li>
+
             <li class="prioritise__item">
-              <h3 class="prioritise__list-title">Customer support</h3>
-              <span class="prioritise__list-text">
-                No bots, no automated replies
-              </span>
+              <h3 class="prioritise__item-title" contenteditable="true">
+                Customer support
+              </h3>
+              <span class="prioritise__item-text"
+                >No bots, no automated replies</span
+              >
               <img
                 src="./assets/images/prioritise-image3.jpg"
                 alt="icon"
-                class="prioritise__list-image"
+                class="prioritise__item-image"
               />
             </li>
-            <li class="prioritise__item">
-              <h3 class="prioritise__list-title">Fast shipping</h3>
-              <span class="prioritise__list-text">
-                Save, Convenient, Reliable
-              </span>
+
+            <li class="prioritise__item contenteditable">
+              <h3 class="prioritise__item-title">Fast shipping</h3>
+              <span class="prioritise__item-text"
+                >Save, Convenient, Reliable</span
+              >
               <img
                 src="./assets/images/prioritise-image4.jpg"
                 alt="icon"
-                class="prioritise__list-image"
+                class="prioritise__item-image"
               />
             </li>
           </ul>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__columns">
+            <ul class="footer__list footer__list-products">
+              <h4 class="footer__title">Products</h4>
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Black tea</a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Green tea</a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">White tea</a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Oolong tea</a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Pu-erh tea</a>
+              </li>
+            </ul>
+
+            <ul class="footer__list footer__list-about">
+              <h4 class="footer__title">Company</h4>
+
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">About Us</a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Contact Us</a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Our Blog</a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">FAQ</a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Shipping & Delivery</a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Refund policy</a>
+              </li>
+
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Terms of Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__inner">
+            <div class="footer__blockquote">
+              <blockquote>
+                <p class="footer__blockquote-text">
+                  “Tea is a journey. It can take you to new places and open your
+                  mind to new experiences. Let every sip transport you to a
+                  world of wonder and possibility”
+                </p>
+                <p class="footer__blockquote-author">
+                  <cite>Dragomir Teodorescu, Tealuxe owner</cite>
+                </p>
+              </blockquote>
+            </div>
+
+            <div class="footer__contacts">
+              <h4 class="footer__title footer__title-contacts">
+                Stay In Touch
+              </h4>
+              <p class="footer__contacts-text">
+                Please feel free to contact us via the email of phone. We would
+                be happy to hear from you!
+              </p>
+
+              <div class="footer__contacts-wrapper">
+                <a class="footer__contacts-logo" href="#">
+                  <img
+                    class="footer__logo"
+                    src="assets/images/footer-logo.svg"
+                    alt="logo"
+                  />
+                </a>
+
+                <ul class="footer__contacts-list">
+                  <li class="footer__contacts-item">
+                    <img
+                      class="footer__contacts-item-icon"
+                      src="assets/images/footer-phone-icon.svg"
+                      alt="phone icon"
+                    />
+                    <a
+                      class="footer__contacts-item-link"
+                      href="tel:370680123456"
+                    >
+                      +370 680 123456
+                    </a>
+                  </li>
+
+                  <li class="footer__contacts-item">
+                    <img
+                      class="footer__contacts-item-icon"
+                      src="assets/images/footer-email-icon.svg"
+                      alt="email icon"
+                    />
+                    <a
+                      class="footer__contacts-item-link"
+                      href="mailto:info@tealuxe.com"
+                      >info@tealuxe.com
+                    </a>
+                  </li>
+                </ul>
+
+                <div class="footer__socials">
+                  <ul class="footer__socials-list">
+                    <li class="footer__socials-item">
+                      <a class="footer__socials-item-link" href="#">
+                        <img
+                          class="footer__socials-icon"
+                          src="assets/images/footer-icon1.svg"
+                          alt="facebook icon"
+                        />
+                      </a>
+                    </li>
+
+                    <li class="footer__socials-item">
+                      <a class="footer__socials-item-link" href="#">
+                        <img
+                          class="footer__socials-icon"
+                          src="assets/images/footer-icon2.svg"
+                          alt="youtube icon"
+                        />
+                      </a>
+                    </li>
+
+                    <li class="footer__socials-item">
+                      <a class="footer__socials-item-link" href="#">
+                        <img
+                          class="footer__socials-icon"
+                          src="assets/images/footer-icon3.svg"
+                          alt="instagram icon"
+                        />
+                      </a>
+                    </li>
+
+                    <li class="footer__socials-item">
+                      <a class="footer__socials-item-link" href="#">
+                        <img
+                          class="footer__socials-icon"
+                          src="assets/images/footer-icon4.svg"
+                          alt=" twitter icon"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="footer__icon">
+            <p class="footer__icon-text">© Tealuxe, 2023</p>
+            <ul class="footer__icon-list">
+              <li class="footer__icon-item">
+                <img
+                  class="footer__icon-image"
+                  src="assets/images/footer-img1.svg"
+                  alt="Mastercard icon"
+                />
+              </li>
+
+              <li class="footer__icon-item">
+                <img
+                  class="footer__icon-image"
+                  src="assets/images/footer-img2.svg"
+                  alt="VISA icon"
+                />
+              </li>
+
+              <li class="footer__icon-item">
+                <img
+                  class="footer__icon-image"
+                  src="assets/images/footer-img3.svg"
+                  alt="GPay icon"
+                />
+              </li>
+
+              <li class="footer__icon-item">
+                <img
+                  class="footer__icon-image"
+                  src="assets/images/footer-img4.svg"
+                  alt="PayPal icon"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>
