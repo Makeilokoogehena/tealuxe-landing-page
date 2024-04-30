@@ -769,6 +769,7 @@ body::before {
   display: flex;
   justify-content: center;
   max-width: 155px;
+  text-align: center;
 }
 
 @media screen and (max-width: 1172px) {
@@ -910,8 +911,7 @@ body::before {
 .newsletter__input {
   border: none;
   border-bottom: 1px solid #b8b58b;
-  max-width: 440px;
-  width: 100%;
+  width: 50%;
   margin-right: 25px;
   background-color: transparent;
   font-family: "Open Sans", sans-serif;
@@ -932,8 +932,9 @@ body::before {
   border: 1px solid #151618;
   font-size: 20px;
   font-family: "Open Sans", sans-serif;
-  max-width: 116px;
+  width: 50%;
   max-height: 51px;
+  min-width: 116px;
 }
 
 .newsletter__agreement {
@@ -951,6 +952,12 @@ body::before {
 .newsletter__agreement-text {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
+}
+
+@media screen and (max-width: 1090px) {
+  .newsletter__button {
+    padding: 12px 25px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -1000,7 +1007,16 @@ body::before {
   }
   .newsletter__input {
     margin-right: 20px;
-    max-width: 324px;
+    font-size: 16px;
+  }
+  .newsletter__button {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .newsletter__button {
+    padding: 12px 5px;
   }
 }
 
@@ -1038,6 +1054,7 @@ body::before {
   align-items: center;
   max-width: 294px;
   width: 100%;
+  text-align: center;
 }
 
 .prioritise__item-title {
