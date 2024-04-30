@@ -445,21 +445,17 @@ body::before {
 .container {
   max-width: 1230px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 .header__inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  gap: 30px;
   align-items: center;
-  justify-content: space-between;
 }
 
-.header__logo {
-  margin: 0;
-  padding-bottom: 38px;
-}
-
-.logo__link {
+.header__logo .logo__image {
   max-width: 74px;
   max-height: 105px;
   overflow: hidden;
@@ -468,6 +464,14 @@ body::before {
 .logo__image {
   width: 100%;
   height: 100%;
+}
+
+.logo__link {
+  display: inline-block;
+}
+
+.menu {
+  margin: 0 auto;
 }
 
 .menu__button {
@@ -541,12 +545,14 @@ body::before {
 
 .mobile-actions {
   background-color: #f7f2ea;
-  padding: 20px 80px;
+  padding: 20px 20px;
   height: 60px;
+  justify-content: center;
+  align-items: center;
 }
 
-.mobile-actions__item:not(:last-child) {
-  margin-right: 70px;
+.mobile-actions__item:nth-child(2) {
+  margin: 0 70px;
 }
 
 .mobile-actions__link-icon {
@@ -564,9 +570,14 @@ body::before {
   margin: 0 100px 0 20px;
 }
 
+.user-actions__item {
+  flex-shrink: 0;
+}
+
 .user-actions__link {
   max-width: 22px;
   max-height: 22px;
+  display: inline-block;
 }
 
 .user-actions__link-icon {
@@ -575,10 +586,6 @@ body::before {
 }
 
 @media screen and (max-width: 1160px) {
-  .header__logo {
-    margin: 0 60px 0 0;
-    padding: 0;
-  }
   .user-actions__item:nth-child(2) {
     margin: 0 50px 0 20px;
   }
@@ -586,7 +593,6 @@ body::before {
 
 @media screen and (max-width: 1000px) {
   .menu {
-    margin-right: 116px;
     padding: 40px 0;
   }
   .menu__item:not(:last-child) {
@@ -604,29 +610,18 @@ body::before {
   .header {
     font-size: 16px;
   }
-  .header__logo {
-    margin-right: 50px;
-  }
-  .menu {
-    margin-right: 50px;
-  }
-  .menu__item:not(:last-child) {
-    margin-right: 45px;
-  }
-}
-
-@media screen and (max-width: 792px) {
-  .menu {
-    margin-right: 28px;
-  }
 }
 
 @media screen and (max-width: 770px) {
   .header {
     position: relative;
   }
+  .header__inner {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
   .header__logo {
-    margin: 0;
+    margin: 0 auto;
     order: 2;
   }
   .menu {
@@ -674,8 +669,6 @@ body::before {
   }
   .mobile-actions {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   .mobile-actions__link {
     display: inline-block;
@@ -684,7 +677,11 @@ body::before {
   }
   .user-actions {
     order: 3;
+    justify-content: flex-end;
     padding: 44px 0;
+  }
+  .user-actions__item:nth-child(2) {
+    margin: 0 30px;
   }
 }
 
@@ -698,16 +695,21 @@ body::before {
   .header {
     padding: 10px 0;
   }
-  .logo__link {
-    max-width: 40px;
-    max-height: 56px;
+  .header__logo .logo__image {
+    max-width: 56px;
   }
   .user-actions {
     padding: 20px 0;
   }
+  .user-actions__item:nth-child(2) {
+    margin: 0 18px;
+  }
 }
 
 @media screen and (max-width: 360px) {
+  .header__inner {
+    gap: 5px;
+  }
   .mobile-menu__list {
     margin: 0 0 30px 0;
   }
@@ -716,9 +718,6 @@ body::before {
   }
   .user-actions {
     padding: 16px 0;
-  }
-  .user-actions__item:nth-child(2) {
-    margin: 0 20px;
   }
 }
 
@@ -1117,6 +1116,7 @@ body::before {
   display: flex;
   justify-content: center;
   max-width: 155px;
+  text-align: center;
 }
 
 @media screen and (max-width: 1172px) {
@@ -1259,7 +1259,7 @@ body::before {
   border: none;
   border-bottom: 1px solid #b8b58b;
   max-width: 440px;
-  width: 100%;
+  width: 50%;
   margin-right: 25px;
   background-color: transparent;
   font-family: "Open Sans", sans-serif;
@@ -1280,8 +1280,9 @@ body::before {
   border: 1px solid #151618;
   font-size: 20px;
   font-family: "Open Sans", sans-serif;
-  max-width: 116px;
+  width: 50%;
   max-height: 51px;
+  min-width: 116px;
 }
 
 .newsletter__agreement {
@@ -1299,6 +1300,12 @@ body::before {
 .newsletter__agreement-text {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
+}
+
+@media screen and (max-width: 1090px) {
+  .newsletter__button {
+    padding: 12px 25px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -1348,7 +1355,16 @@ body::before {
   }
   .newsletter__input {
     margin-right: 20px;
-    max-width: 324px;
+    font-size: 16px;
+  }
+  .newsletter__button {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .newsletter__button {
+    padding: 12px 5px;
   }
 }
 
@@ -1386,6 +1402,7 @@ body::before {
   align-items: center;
   max-width: 294px;
   width: 100%;
+  text-align: center;
 }
 
 .prioritise__item-title {
